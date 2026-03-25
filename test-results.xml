@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0000" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-03-25T13:33:13" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Math operations" timestamp="2026-03-25T13:33:13" tests="3" file="/home/circleci/project/test/test.js" time="0.0000" failures="0">
+    <testcase name="Math operations should add two numbers correctly" time="0.0000" classname="should add two numbers correctly">
+    </testcase>
+    <testcase name="Math operations should subtract two numbers correctly" time="0.0000" classname="should subtract two numbers correctly">
+    </testcase>
+    <testcase name="Math operations should multiply two numbers correctly" time="0.0000" classname="should multiply two numbers correctly">
+    </testcase>
+  </testsuite>
+</testsuites>
