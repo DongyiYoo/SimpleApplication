@@ -24,9 +24,6 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@8.1.4'
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
@@ -44,8 +41,10 @@ jobs:
             - ./node_modules
   deploy:
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:latest
     steps:
+      - checkout
+      - add_ssh_keys
       - run:
           name: deploy-application
           command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "rm -rf SimpleApplication/ && git clone https://github.com/DongyiYoo/SimpleApplication.git && source SimpleApplication/deploy.sh"
