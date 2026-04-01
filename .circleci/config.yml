@@ -31,7 +31,7 @@ jobs:
           command: npm install
       - run:
           name: audit-packages
-          command: npm audit
+          command: npm audit --audit-level=critical
       - run:
           name: test-run
           command: npm run test
