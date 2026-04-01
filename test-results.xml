@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0180" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-04-01T12:52:04" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="simpleApp test" timestamp="2026-04-01T12:52:04" tests="2" file="/Users/dongyiyoo/Desktop/NCI Year 4/DevOps/CA/SimpleApplication-2/test/test.js" time="0.0180" failures="0">
+    <testcase name="simpleApp test should return 200 OK and html format on main page" time="0.0160" classname="should return 200 OK and html format on main page">
+    </testcase>
+    <testcase name="simpleApp test should display Coffee,Milk" time="0.0020" classname="should display Coffee,Milk">
+    </testcase>
+  </testsuite>
+</testsuites>
