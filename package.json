@@ -5,21 +5,23 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "mocha test/*.js",
-    "dev": "ENV=DEV;nodemon ./bin/www"
+    "dev": "ENV=DEV nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "ejs": "^5.0.1",
-    "express": "^4.22.1",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
     "http-errors": "~1.6.3",
     "morgan": "^1.10.1"
   },
   "devDependencies": {
-    "diff": "^8.0.3",
-    "mocha": "^11.3.0",
+    "mocha": "^11.1.0",
     "nodemon": "^3.1.14",
-    "serialize-javascript": "^7.0.5",
-    "supertest": "^7.2.2"
+    "supertest": "^7.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.3",
+    "serialize-javascript": "^7.0.5"
   }
 }

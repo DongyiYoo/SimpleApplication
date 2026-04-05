@@ -6,7 +6,7 @@ sudo npm install -g pm2
 pm2 stop simpleApplication
 # change directory into folder with the app
 cd SimpleApplication/
-#install app dependancies
+#install app dependencies
 npm install
 echo $PRIVATE_KEY > privatekey.pem
 echo $SERVER > server.crt
