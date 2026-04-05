@@ -47,6 +47,9 @@ jobs:
       - add_ssh_keys
       - run:
           name: deploy-application
-          command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "rm -rf SimpleApplication/ && git clone https://github.com/DongyiYoo/SimpleApplication.git && source SimpleApplication/deploy.sh"
+          command: |
+            echo "$PRIVATE_KEY" > ~/private_key.pem
+            chmod 600 ~/private_key.pem
+            ssh -o StrictHostKeyChecking=no -i ~/private_key.pem $EC2_USERNAME@$EC2_PUBLIC_DNS "rm -rf SimpleApplication/ && git clone https://github.com/DongyiYoo/SimpleApplication.git && source SimpleApplication/deploy.sh"
     
 
